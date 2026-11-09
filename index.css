@@ -1,0 +1,11 @@
+@tailwind base;@tailwind components;@tailwind utilities;
+html{scroll-behavior:smooth}body{@apply bg-char text-ivory font-sans font-light antialiased}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s ease}.reveal.in{opacity:1;transform:none}
+.page{animation:fade .6s ease}@keyframes fade{from{opacity:0}to{opacity:1}}
+.nav-link{position:relative}.nav-link:after{content:"";position:absolute;left:0;bottom:-6px;height:1px;width:100%;background:#c2a878;transform:scaleX(0);transform-origin:left;transition:transform .35s}
+.nav-link:hover:after,.nav-link.active:after{transform:scaleX(1)}
+.btn{@apply inline-block border border-gold px-7 py-3 text-xs uppercase tracking-[.2em] transition-colors duration-300}
+.btn-solid{@apply bg-gold text-char hover:bg-transparent hover:text-gold}.btn-line{@apply text-gold hover:bg-gold hover:text-char}
+.eyebrow{@apply text-xs uppercase tracking-[.3em] text-gold}.h1{@apply font-serif text-5xl md:text-7xl leading-[1.05]}.h2{@apply font-serif text-3xl md:text-5xl leading-tight}
+.ph{background:linear-gradient(135deg,#2a2620,#14110e 60%,#3a3226)}.zoom img{transition:transform 1.2s ease}.zoom:hover img{transform:scale(1.06)}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
